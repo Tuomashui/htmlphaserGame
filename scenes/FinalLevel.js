@@ -97,17 +97,13 @@ export class FinalLevel extends Phaser.Scene {
                     
                 if(i < 13){
                         brick.displayWidth = 500; 
-                        brick.displayHeight = 60;
-                        brick.body.setSize(brick.displayWidth, brick.displayHeight);
-                    
+                        brick.displayHeight = 60;    
                 }else{
                     brick.displayWidth = 60; 
                     brick.displayHeight = 500;
-                    brick.body.setSize(brick.displayWidth, brick.displayHeight);
     
                 }
-            }
-            
+            }     
     
             //CENTIPEDE-CODES
             this.centipede = this.physics.add.sprite(1000 / 2, 1000 / 2, "centipede");
@@ -176,7 +172,7 @@ export class FinalLevel extends Phaser.Scene {
                 });
             }
 
-        restartGame(centipede, start) {
+        restartGame() {
             this.score = 0;
             this.scene.start("GameOverScene");
         }
@@ -187,7 +183,7 @@ export class FinalLevel extends Phaser.Scene {
             const vacuum = this.vacuumGroup.create(Phaser.Math.Between(100, 1000), Phaser.Math.Between(100, 1000), 'vacuum');
             vacuum.displayWidth = 200;
             vacuum.displayHeight = 200;
-            vacuum.body.setSize(200,200);
+            vacuum.body.setSize(180,180);
             this.physics.add.collider(this.vacuumGroup, this.brickGroup);
             
             switch (direction) {

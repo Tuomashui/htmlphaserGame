@@ -88,12 +88,10 @@ class PlayGameScene extends Phaser.Scene {
                 if(i < 13){
                         brick.displayWidth = 200; 
                         brick.displayHeight = 25;
-                        brick.body.setSize(brick.displayWidth+20, brick.displayHeight+20);
                     
                 }else{
                     brick.displayWidth = 25; 
                     brick.displayHeight = 200;
-                    brick.body.setSize(brick.displayWidth+20, brick.displayHeight+20);
     
                 }
             }
@@ -182,7 +180,7 @@ class PlayGameScene extends Phaser.Scene {
             const vacuum = this.vacuumGroup.create(Phaser.Math.Between(100, game.config.width), Phaser.Math.Between(100, game.config.height), 'vacuum');
             vacuum.displayWidth = 75;
             vacuum.displayHeight = 75;
-            vacuum.body.setSize(200,200);
+            vacuum.body.setSize(80,100);
             this.physics.add.collider(this.vacuumGroup, this.brickGroup);
             
             switch (direction) {
@@ -207,18 +205,16 @@ class PlayGameScene extends Phaser.Scene {
     
         update() {
 
-            if(this.score > 2){
+            if(this.score > 1){
                 this.cameras.main.setBackgroundColor('#006600');
                 
             }
-            if(this.score > 4){
+            if(this.score > 2){
                 this.cameras.main.setBackgroundColor('#004400');
-                this.nextLevel();
+                
             }
-            if(this.score > 6){
+            if(this.score > 3){
                 this.cameras.main.setBackgroundColor('#002200');
-            }
-            if(this.score > 7 ){
                 this.nextLevel();
             }
                

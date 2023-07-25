@@ -5,7 +5,7 @@ export class BootGameScene extends Phaser.Scene {
     create(){
         this.cameras.main.setBackgroundColor('#000000');
         this.add.text(50,50, "Loading game...");
-        let text = this.add.text(500, 300, 'REACH 7 POINTS!!', {
+        let text = this.add.text(500, 300, 'REACH 4 POINTS!!', {
             fontFamily: 'Arial',
             fontSize: '64px',
             color: `rgb(${0}, ${0}, ${200})`
