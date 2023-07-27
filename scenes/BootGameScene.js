@@ -1,3 +1,4 @@
+//I watched a youtubevideo how to make this kind of scene https://www.youtube.com/watch?v=gFXx7lgxK9A
 export class BootGameScene extends Phaser.Scene {
     constructor(){
         super("BootGameScene");
