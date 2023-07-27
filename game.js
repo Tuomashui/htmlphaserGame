@@ -2,7 +2,7 @@ import { BootGameScene } from './scenes/BootGameScene.js';
 import { GameOverScene } from './scenes/GameOverScene.js';
 import { FinalLevel } from './scenes/FinalLevel.js';
 import { Congratulation } from "./scenes/Congratulation.js"
-
+//basic idea on this file is from Ernos video https://www.youtube.com/watch?v=O6zoZAq86io
 
 let game
 let gameOptions = {
